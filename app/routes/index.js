@@ -9,7 +9,7 @@ import {
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
 import System from './Dashboards/System';
-import Monitor from './Dashboards/Monitor'; 
+import Monitor from './Dashboards/Monitor';
 import Financial from './Dashboards/Financial';
 import Stock from './Dashboards/Stock';
 import Reports from './Dashboards/Reports';
@@ -100,6 +100,8 @@ import Register from './Pages/Register';
 import Success from './Pages/Success';
 import Timeline from './Pages/Timeline';
 
+import Customers from './Pages/Customers';
+
 import Icons from './Icons';
 
 // ----------- Layout Imports ---------------
@@ -115,7 +117,7 @@ export const RoutedContent = () => {
     return (
         <Switch>
             <Redirect from="/" to="/dashboards/projects" exact />
-            
+
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
             <Route path="/dashboards/system" exact component={System} />
@@ -125,11 +127,11 @@ export const RoutedContent = () => {
             <Route path="/dashboards/reports" exact component={Reports} />
 
             <Route path='/widgets' exact component={Widgets} />
-            
+
             { /*    Cards Routes     */ }
             <Route path='/cards/cards' exact component={Cards} />
             <Route path='/cards/cardsheaders' exact component={CardsHeaders} />
-            
+
             { /*    Layouts     */ }
             <Route path='/layouts/navbar' component={NavbarOnly} />
             <Route path='/layouts/sidebar' component={SidebarDefault} />
@@ -173,7 +175,7 @@ export const RoutedContent = () => {
             <Route component={ DatePicker } path="/forms/date-picker" />
             <Route component={ Dropzone } path="/forms/dropzone" />
             <Route component={ Sliders } path="/forms/sliders" />
-            
+
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
 
@@ -218,6 +220,7 @@ export const RoutedContent = () => {
             <Route component={ Register } path="/pages/register" />
             <Route component={ Success } path="/pages/success" />
             <Route component={ Timeline } path="/pages/timeline" />
+            <Route component={ Customers } path="/pages/customers" />
 
             <Route path='/icons' exact component={Icons} />
 
@@ -247,7 +250,7 @@ export const RoutedNavbars  = () => (
         <Route
             component={ DefaultNavbar }
         />
-    </Switch>  
+    </Switch>
 );
 
 export const RoutedSidebars = () => (

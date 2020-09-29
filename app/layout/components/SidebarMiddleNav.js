@@ -17,6 +17,11 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Reports" to='/dashboards/reports' exact />
         </SidebarMenu.Item>
         <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-user"></i>}
+            title="Customers"
+            to='/pages/customers'
+        />
+        <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-th"></i>}
             title="Widgets"
             to='/widgets'
